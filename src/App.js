@@ -1,13 +1,25 @@
+import {useEffect, useState} from 'react';
+import axios from 'axios';
 import logo from './logo.svg';
 import './App.css';
 
 function App() {
+  const [datos, setDatos] = useState('text');
+  const fetchData = async()=>{
+    const result = await axios.get('/.netlify/functions/helloWorld')
+    setDatos(result.data.message);
+  }
+
+  useEffect(() => {
+    fetchData()
+  }, []);
+
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          {datos}
         </p>
         <a
           className="App-link"
