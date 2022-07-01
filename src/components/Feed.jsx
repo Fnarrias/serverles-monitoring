@@ -57,8 +57,6 @@ export const data = {
 };
 
 const Feed = ()=>{
-    
-
     return(
         <Container maxWidth="lg">
             <Line options={options} data={data} />

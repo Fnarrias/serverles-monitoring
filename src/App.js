@@ -19,7 +19,7 @@ function App() {
 
   return (
     <Grid container justify = "center">
-    <Navbar />
+    <Navbar datos={datos}/>
       <Stack direction="row" spacing={2} justifyContent="space-between">
         <Sidebar />
         <Feed />
