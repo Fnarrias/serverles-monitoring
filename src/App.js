@@ -1,6 +1,6 @@
 import {useEffect, useState} from 'react';
 import axios from 'axios';
-import {Box, Stack} from '@mui/material'
+import {Grid, Stack} from '@mui/material'
 import Sidebar from './components/Sidebar';
 import Feed from './components/Feed';
 import Navbar from './components/Navbar';
@@ -18,13 +18,13 @@ function App() {
   }, []);
 
   return (
-    <Box>
+    <Grid container justify = "center">
     <Navbar />
       <Stack direction="row" spacing={2} justifyContent="space-between">
         <Sidebar />
         <Feed />
       </Stack>
-    </Box>
+    </Grid>
   );
 }
 

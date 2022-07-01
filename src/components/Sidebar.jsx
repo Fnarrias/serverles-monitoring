@@ -8,7 +8,7 @@ import AddCircleOutlineIcon from '@mui/icons-material/AddCircleOutline';
 
 const Sidebar = ()=>{
     return(
-        <List sx={{ display:{xs: "none", sm:"block"} }}>
+        <List sx={{ display:{xs: "none", sm:"block"}}}>
         <ListItemButton>
           <ListItemIcon><HomeIcon /></ListItemIcon>
           <ListItemText primary="Home" secondary="Return where you belong" />
